@@ -64,7 +64,7 @@
     function myFunctionc() {
         s=s+")";
         p=p-1;
-        if(p<0||s[s.length-2]=="(") {
+        if(p<0||w===6) {
             s="Error";
             document.getElementById("show").innerHTML = s;
             s="";
@@ -233,6 +233,31 @@
         document.getElementById("show").innerHTML = s;
         w=0;
     }
+    window.addEventListener('keydown', function(e){
+        if(e.key==='1') return myFunction1();
+        else if(e.key==='2') return myFunction2();
+        else if(e.key==='3') return myFunction3();
+        else if(e.key==='4') return myFunction4();
+        else if(e.key==='5') return myFunction5();
+        else if(e.key==='6') return myFunction6();
+        else if(e.key==='7') return myFunction7();
+        else if(e.key==='8') return myFunction8();
+        else if(e.key==='9') return myFunction9();
+        else if(e.key==='0') return myFunction0();
+        else if(e.key==='(') return myFunctionb();
+        else if(e.key===')') return myFunctionc();
+        else if(e.key==='Backspace') return myFunctiond();
+        else if(e.key==='+') return myFunctione();
+        else if(e.key==='-') return myFunctionf();
+        else if(e.key==='.') return myFunctiong();
+        else if(e.key==='Enter') return myFunctionh();
+        else if(e.key==='/') return myFunctioni();
+        else if(e.key==='*') return myFunctionx();
+
+
+
+
+    }, false);
 </script>
 
 

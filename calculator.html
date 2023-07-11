@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>計算機</title>
+</head>
+<body class="flex flex-col justify-center items-center min-w-screen min-h-screen">
+<div id="show" class="flex bg-gray-300 text-blake justify-center w-40 h-10" style="display:flex;justify-content:right;align-items:center;font-size:20px;"></div>
+<div class="flex gap-1 p-2">
+    <button id="ba" onclick="myFunctiona()" class="rounded-full bg-gray-300 hover:bg-gray-200 text-blake justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">CE</button>
+    <button  id="bb" onclick="myFunctionb()" class="rounded-full bg-gray-300 hover:bg-gray-200 text-blake justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">(</button>
+    <button id="bc" onclick="myFunctionc()" class="rounded-full bg-gray-300 hover:bg-gray-200 text-blake justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">)</button>
+    <button id="bd" onclick="myFunctiond()" class="rounded-full bg-gray-300 hover:bg-gray-200 text-blake justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">⌫</button>
+</div>
+<div class="flex gap-1 p-2">
+    <button id="b7" onclick="myFunction7()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">7</button>
+    <button id="b8" onclick="myFunction8()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">8</button>
+    <button id="b9" onclick="myFunction9()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">9</button>
+    <button id="be" onclick="myFunctione()" class="rounded-full bg-yellow-500 hover:bg-yellow-300 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">+</button>
+</div>
+<div class="flex gap-1 p-2">
+    <button id="b4" onclick="myFunction4()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">4</button>
+    <button id="b5" onclick="myFunction5()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">5</button>
+    <button id="b6" onclick="myFunction6()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">6</button>
+    <button id="bf" onclick="myFunctionf()" class="rounded-full bg-yellow-500 hover:bg-yellow-300 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">-</button>
+</div>
+<div class="flex gap-1 p-2">
+    <button id="b1" onclick="myFunction1()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">1</button>
+    <button id="b2" onclick="myFunction2()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">2</button>
+    <button id="b3" onclick="myFunction3()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">3</button>
+    <button id="bx" onclick="myFunctionx()" class="rounded-full bg-yellow-500 hover:bg-yellow-300 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">×</button>
+</div>
+<div class="flex gap-1 p-2">
+    <button id="b0" onclick="myFunction0()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">0</button>
+    <button id="bg" onclick="myFunctiong()" class="rounded-full bg-gray-500 hover:bg-gray-400 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">.</button>
+    <button id="bh" onclick="myFunctionh()" class="rounded-full bg-yellow-500 hover:bg-yellow-300 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">=</button>
+    <button id="bi" onclick="myFunctioni()" class="rounded-full bg-yellow-500 hover:bg-yellow-300 text-white justify-center items-center mx-auto w-10 h-10" style="display:flex;justify-content:center;align-items:center;font-size:20px;">÷</button>
+</div>
+<script>
+    let s="",w=0,p=0;
+    function myFunctiona() {
+        s="";
+        w=0;
+        p=0;
+        document.getElementById("show").innerHTML = s;
+    }
+    function myFunctionb() {
+        s=s+"(";
+        p=p+1;
+        if((w!==1||w!==2||w!==3||w!==4)&& s.length!==1) {
+            s="Error";
+            document.getElementById("show").innerHTML = s;
+            s="";
+            w=0;
+            p=0;
+        }
+        else{
+            w=6;
+            document.getElementById("show").innerHTML = s;
+        }
+    }
+    function myFunctionc() {
+        s=s+")";
+        p=p-1;
+        if(p<0||s[s.length-2]=="(") {
+            s="Error";
+            document.getElementById("show").innerHTML = s;
+            s="";
+            w=0;
+            p=0;
+        }
+        else{
+            w=7;
+            document.getElementById("show").innerHTML = s;
+        }
+    }
+    function myFunctiond() {
+        let r=s;
+        s="";
+        for(let i=0;i<r.length-1;i++) {s=s+r[i];}
+        if(s[s.length-1]==="+") w=1;
+        else if(s[s.length-1]==="-") w=2;
+        else if(s[s.length-1]==="×") w=3;
+        else if(s[s.length-1]==="÷") w=4;
+        else if(s[s.length-1]===".") w=5;
+        else if(s[s.length-1]==="(") {
+            w=6;
+            p=p-1;
+        }
+        else if(s[s.length-1]===")") {
+            w=7;
+            p=p+1;
+        }
+        else w=0;
+        document.getElementById("show").innerHTML = s;
+    }
+    function myFunctione() {
+        s=s+"+";
+        if(w===1||w===2||w===3||w===4||s.length===1) {
+            s="Error";
+            document.getElementById("show").innerHTML = s;
+            s="";
+            w=0;
+            p=0;
+        }
+        else{
+            w=1;
+            document.getElementById("show").innerHTML = s;
+        }
+    }
+    function myFunctionf() {
+        s=s+"-";
+        if(w===1||w===2||w===3||w===4||s.length===1) {
+            s="Error";
+            document.getElementById("show").innerHTML = s;
+            s="";
+            w=0;
+            p=0;
+        }
+        else{
+            w=2;
+            document.getElementById("show").innerHTML = s;
+        }
+    }
+    function myFunctionx() {
+        s=s+"×";
+        if(w===1||w===2||w===3||w===4||s.length===1) {
+            s="Error";
+            document.getElementById("show").innerHTML = s;
+            s="";
+            w=0;
+            p=0;
+        }
+        else{
+            w=3;
+            document.getElementById("show").innerHTML = s;
+        }
+    }
+    function myFunctioni() {
+        s=s+"÷";
+        if(w===1||w===2||w===3||w===4||s.length===1) {
+            s="Error";
+            document.getElementById("show").innerHTML = s;
+            s="";
+            w=0;
+            p=0;
+        }
+        else{
+            w=4;
+            document.getElementById("show").innerHTML = s;
+        }
+    }
+    function myFunctiong() {
+        s=s+".";
+        w=5;
+        document.getElementById("show").innerHTML = s;
+    }
+    function myFunctionh() {
+        w=0;
+        let r="";
+        for(let i=0;i<s.length;i++) {
+            if(s[i]==="×") r=r+"*";
+            else if(s[i]==="÷") r=r+"/";
+            else r=r+s[i];
+        }
+        if(p!==0) {
+            s="Error";
+            document.getElementById("show").innerHTML = s;
+        }
+        else {
+            if(eval(r)===undefined) document.getElementById("show").innerHTML ="Error";
+            else document.getElementById("show").innerHTML = eval(r).toFixed(2);
+        }
+        s="";
+        p=0;
+    }
+    function myFunction0() {
+        s=s+"0";
+        if(w===4) {
+            s="Error";
+            document.getElementById("show").innerHTML = s;
+            s="";
+            p=0;
+        }
+        else{
+            document.getElementById("show").innerHTML = s;
+        }
+        w=0;
+    }
+    function myFunction1() {
+        s=s+"1";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }
+    function myFunction2() {
+        s=s+"2";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }
+    function myFunction3() {
+        s=s+"3";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }
+    function myFunction4() {
+        s=s+"4";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }
+    function myFunction5() {
+        s=s+"5";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }
+    function myFunction6() {
+        s=s+"6";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }
+    function myFunction7() {
+        s=s+"7";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }
+    function myFunction8() {
+        s=s+"8";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }function myFunction9() {
+        s=s+"9";
+        document.getElementById("show").innerHTML = s;
+        w=0;
+    }
+    <input type="text" onKeyDown="myFunction()">
+</script>
+
+
+</body>
+</html>
